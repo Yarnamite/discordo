@@ -86,6 +86,12 @@ func (mi *MessageInput) send() {
 		return
 	}
 
+	text = strings.Replace(text, ":door:", "🚪", -1)
+	text = strings.Replace(text, ":dove:", "🕊️", -1)
+	text = strings.Replace(text, ":pig2:", "🐖", -1)
+	text = strings.Replace(text, ":cat2:", "🐈", -1)
+	text = strings.Replace(text, ":crying_cat_face:", "😿", -1)
+
 	data := api.SendMessageData{
 		Content: text,
 	}
